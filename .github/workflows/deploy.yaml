@@ -13,15 +13,15 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t prayushbogati/react-test -f ./client/Dockerfile.dev ./client
-      - run: docker run -e CI=true prayushbogati/react-test npm test
+      - run: docker build -t prayushbogati1/react-test -f ./client/Dockerfile.dev ./client
+      - run: docker run -e CI=true prayushbogati1/react-test npm test
 
-      - run: docker build -t prayushbogati/multi-client ./client
-      - run: docker build -t prayushbogati/multi-nginx ./nginx
-      - run: docker build -t prayushbogati/multi-server ./server
-      - run: docker build -t prayushbogati/multi-worker ./worker
+      - run: docker build -t prayushbogati1/multi-client ./client
+      - run: docker build -t prayushbogati1/multi-nginx ./nginx
+      - run: docker build -t prayushbogati1/multi-server ./server
+      - run: docker build -t prayushbogati1/multi-worker ./worker
 
-      - run: docker push prayushbogati/multi-client
-      - run: docker push prayushbogati/multi-nginx
-      - run: docker push prayushbogati/multi-server
-      - run: docker push prayushbogati/multi-worker
+      - run: docker push prayushbogati1/multi-client
+      - run: docker push prayushbogati1/multi-nginx
+      - run: docker push prayushbogati1/multi-server
+      - run: docker push prayushbogati1/multi-worker
