@@ -28,3 +28,7 @@ services:
     hostname: nginx
     ports:
       - "80:80"
+    restart: unless-stopped
+    depends_on:
+      - client
+      - api
